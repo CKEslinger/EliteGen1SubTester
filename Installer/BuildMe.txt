@@ -1,0 +1,88 @@
+For myriad reasons it is too difficult to explain how to use the VB6 Package 
+and Deployment Wizard (P&D Wiz) to “automatically” create a new installer for 
+the PassTime Elite Tester application. A much simpler explanation and less 
+time consuming, frustrating, etc. task is to rebuild the cabinet file.
+
+When the P&D Wiz creates an installer in your specified install folder, it 
+creates two files, a SETUP.LST and a cabinet file (i.e., PassTimeTester.CAB), 
+and copies the static file, “Setup.exe” to your install folder. It also 
+creates a folder named “Support”. The support folder is not distributed to the 
+end user. It contains all of the files that the installer will put in to the 
+cabinet file. It also contains an identical copy of the SETUP.LST file and a 
+batch (i.e., PassTimeTester.BAT) file for rebuilding the cabinet.
+
+To update a file in the installer, it is fairly easy to copy the changed 
+file(s) to the “Support” directory, modify the Setup.lst file with a text 
+editor and rebuild the cabinet file. So long as no additional files are added 
+to the project, this is a very easy process for updating the installer. Even 
+if new files are added this process can still be used but I will save that 
+discussion for a later date.
+
+Instructions for updating the PassTimeTester.exe file in the tester installer:
+The output from running the P&D Wiz for the PassTime Elite Tester application 
+is located in the repository at, 
+./Software/Tester_Installer and looks like the following 
+when checked out:
+
+01/21/2009  10:42 AM    <DIR>          .
+01/21/2009  10:42 AM    <DIR>          ..
+01/21/2009  10:27 AM             4,165 BuildMe.txt
+01/21/2009  10:45 AM    <DIR>          Support
+               1 File(s)          4,165 bytes
+               3 Dir(s)  71,042,822,144 bytes free
+
+1. Copy the new PassTimeTester.exe 
+   (./Software/Tester/PassTimeTester.exe) in to the 
+   Support folder.
+
+2. Right click on the PassTimeTester.exe application and click ”Properties”
+
+3. Make a note the, “Modified” date and time as well as the “Size” in bytes 
+   For example:
+      Modified:		Today, March 06, 2012, 3:51:07 PM
+      Size: 		652 KB (667,648 bytes)
+
+4. Click on the “Version” tab of the file properties dialog box
+
+5. Make a note of the “File version”
+   For example:
+      File Version:	1.0.0.169
+
+6. Click “Cancel to close the file properties dialog box
+
+7. Use notepad to open the .\Software\Tester_Installer\Support\Setup.Lst file
+
+8. In the “[Setup1 Files]” section of the file, there should be an entry that 
+   looks like the following:
+   File17=@PassTimeTester.exe,$(AppPath),,,5/2/07 10:56:44 AM,626688,1.0.0.124
+   Update the date, time, file size and file version to the values noted from 
+   the file properties
+
+9. Save the Setup.lst file and exit notepad
+
+10. Double click the PassTimeTester.BAT file to rebuild the cabinet file. The 
+    new cabinet file and a copy of the Setup.lst file will be copied to the
+    install folder
+
+11. Check out the trunk\System\SystemSetup\Software folder
+
+12. Copy the .\Software\Tester_Installer\PassTimeTester.cab and 
+    .\Software\Tester_Installer\Setup.lst to the system setup software folder, 
+    overwriting the existing files. The setup.exe file is static and does not 
+    need to be copied over
+
+13. Verify that the installer works by following the instructions in the 
+    .\System\SystemSetup\Documentation\Installer_R_and_R.txt document to remove 
+    and reinstall the tester application
+
+14. Commit the updated .\Software\Tester_Installer folder to the repository
+
+15. Commit the updated .\System\SystemSetup\Software folder to the repository
+
+16.  Follow the instructions in the file called PassTime_Elite_Tester_CD_Contents.xls
+     in the directory  ./System/Documentation/CD_Contents/ 
+
+If a file name changed:
+1. Open the, "PassTimeTester.DDF," file using notepad
+2. Find the old file name in the list and update it to the new file name
+3. Save the file, exit and repeat steps 9 through 12 above

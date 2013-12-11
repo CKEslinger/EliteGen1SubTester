@@ -1,0 +1,336 @@
+<!-- Model Type configuration file for the PassTime Elite II Tester application -->
+<Elite>
+	<Version>
+		<xmlFile Ver="2.90"/>
+		<MinAppVer Major="2" Minor="4" Revision="17"/>
+		<MaxAppVer Major="2" Minor="4" Revision="999"/>
+	</Version>
+	<Tests>
+		<!--    Defined tests are:                                      -->
+		<!--             3-Download the firmware                        -->
+		<!--             7-Configure SMS Reply-to address               -->
+		<!--             8-Configure SMS as the default comm. mode      -->
+		<!--             9-Configure low power mode                     -->
+		<!--            10-Configure antitheft mode                     -->
+		<!--            11-Configure the APN and password               -->
+		<!--            12-Configure the server IP addresses            -->
+		<!--            14-Configure the service center address         -->
+		<!--            15-Configure the port address                   -->
+		<!--            16-Configure the Serial #                       -->
+		<!--            17-Configure the IMEI on the modem              -->
+		<!--            18-Save Changes to SPI Flash                    -->
+		<!--            19-Test Application firmware version            -->
+		<!--            20-Test the Serial #                            -->
+		<!--            21-Test the IMEI from the modem                 -->
+		<!--            22-Test the IMSI from the SIM card              -->
+		<!--            23-Test the ICCID from the SIM card             -->
+		<!--            24-Test the buzzer                              -->
+		<!--            25-Test RF receiver                             -->
+		<!--            26-Test LEDs                                    -->
+		<!--            27-Test ignition relay                          -->
+		<!--            28-Test starter relay                           -->
+		<!--            29-Test relays                                  -->
+		<!--            30-Test the voltage regulator                   -->
+		<!--            31-Test GPS Signal Strength                     -->
+		<!--            32-Test GSM Signal Strength                     -->
+		<!--            40-Power ON                                     -->
+		<!--            41-Power ON                                     -->
+		<!--            42-Power ON                                     -->
+		<!--            43-Power ON                                     -->
+		<!--            45-Test DUT current draw                        -->
+		<!--            46-Test DUT current draw                        -->
+		<!--            47-Test DUT current draw                        -->
+		<!--            48-Test DUT current draw                        -->
+		<!--            50-Configure Serial Comms to Device             -->
+		<!--            51-Configure Serial Comms to Device             -->
+		<!--            52-Configure Serial Comms to Device             -->
+		<!--            54-Configure GSM Modem Serial Comms             -->
+		<!--            55-Test if modem initialized correctly          -->
+		<!--            56-Test if modem initialized correctly          -->
+		<!--            60-Turn power OFF                               -->
+		<!--            61-Turn power OFF                               -->
+		<!--            62-Turn power OFF                               -->
+		<!--            65-Test 'Fail Safe' mode                        -->
+		<!--            66-TEST Verify Super Cap Voltage                -->
+		<!--            70-Additional Tests                             -->
+		<NumOfTests>70</NumOfTests>
+		<Download>3,40,45,60</Download>
+		<Configure>7,8,9,10,11,12,13,14,15,16,17,18,41,46,50,54,55,61</Configure>
+		<Wireless></Wireless>
+		<Test>19,20,21,22,23,24,25,26,27,28,29,30,31,32,42,43,47,48,51,52,56,62,65,66</Test>
+	</Tests>
+	<AddTests>
+		<ADD1 Description="" Command="" Result="" Time=""/>
+	</AddTests>
+	<Settings>
+		<Company>passtime</Company>
+		<Main Left=" 5475" Top=" 2685" Width=" 17850" Height=" 10815"/>
+		<Operations Download="0" Configure="0" Test="1"/>
+		<DataPath>C:\PassTimeData\</DataPath>
+		<ResultsLog>PassTimeInv.txt</ResultsLog>
+		<PrinterDir>C:\PassTimeTester\</PrinterDir>
+		<COMPorts>
+			<PS Port="1" Baud="9600" DataBits="8" Parity="N" StopBits="2" FlowCtrl="None"/>
+			<Elite Port="4" Baud="115200" DataBits="8" Parity="N" StopBits="1" FlowCtrl="None"/>
+			<CellSiteSimulator Port="5" Baud="38400" DataBits="8" Parity="N" StopBits="1" FlowCtrl="XONXOFF"/>
+		</COMPorts>
+		<BarCodes NumToPrint=" 2" NumToScan=" 0"/>
+		<GPSSimulator SVID="14" Lock=" 20" Min="30" Max="60" xMin="30" xMax="60"/>
+		<Sound Min=" 100"/>
+		<V_DUT>
+			<Typical Avg="12000" Min="11500" Max="12500" Wait="0"/>
+			<PWR_OFF_DLY_MEAS Avg="4600" Min="4200" Max="5000" Wait="5"/>
+		</V_DUT>
+		<CellSiteSimulator Station="00101" Min="14" Max="31" Reg_Wait="30" CSQ_Wait="30"/>
+		<Attenuation>
+			<BLFT1 CompName="PASSTIME" GSM="0" GPS="0"/>
+			<BLFT2 CompName="DJK92VC1" GSM="0" GPS="0"/>
+			<BLFT3 CompName="PT-BLFT-3" GSM="0" GPS="0"/>
+		</Attenuation>
+	</Settings>
+	<SIMs>
+		<T-Mobile>
+			<APNs>
+				<APN0 Value="elite.t-mobile.com" Pass="passw0rd"/>
+				<APN1 Value=" " Pass="passw0rd"/>
+				<APN2 Value=" " Pass="passw0rd"/>
+				<APN3 Value=" " Pass="passw0rd"/>
+				<APN4 Value=" " Pass="passw0rd"/>
+				<APN5 Value=" " Pass="passw0rd"/>
+			</APNs>
+			<Servers>
+				<S1 IP="10.10.39.30"/>
+				<S2 IP="10.10.39.33"/>
+				<S3 IP="0.0.0.0"/>
+				<S4 IP="0.0.0.0"/>
+				<S5 IP="0.0.0.0"/>
+			</Servers>
+			<SMS_Reply>
+				<A1 ADDR="2239"/>
+				<A2 ADDR="2276"/>
+				<A3 ADDR=""/>
+				<A4 ADDR=""/>
+				<A5 ADDR=""/>
+			</SMS_Reply>
+			<SMS_Mode ResetMin="10080" HelloPktInterval="10140" State="7"></SMS_Mode>
+			<Port>1720</Port>
+			<SrvcCntrAddr ADDR="+12063130004"></SrvcCntrAddr>
+		</T-Mobile>
+		<Numerex>
+			<APNs>
+				<APN0 Value="nmrx.d2.apn" Pass="passw0rd"/>
+				<APN1 Value=" " Pass="passw0rd"/>
+				<APN2 Value=" " Pass="passw0rd"/>
+				<APN3 Value=" " Pass="passw0rd"/>
+				<APN4 Value=" " Pass="passw0rd"/>
+				<APN5 Value=" " Pass="passw0rd"/>
+			</APNs>
+			<Servers>
+				<S1 IP="10.10.39.30"/>
+				<S2 IP="10.10.39.33"/>
+				<S3 IP="0.0.0.0"/>
+				<S4 IP="0.0.0.0"/>
+				<S5 IP="0.0.0.0"/>
+			</Servers>
+			<SMS_Reply>
+				<A1 ADDR="2239"/>
+				<A2 ADDR=""/>
+				<A3 ADDR=""/>
+				<A4 ADDR=""/>
+				<A5 ADDR=""/>
+			</SMS_Reply>
+			<SMS_Mode ResetMin="10080" HelloPktInterval="10140" State="7"></SMS_Mode>
+			<Port>1720</Port>
+			<SrvcCntrAddr ADDR="+19202929809"></SrvcCntrAddr>
+		</Numerex>
+		<Rogers>
+			<APNs>
+				<APN0 Value="passtime.apn" Pass="passw0rd"/>
+				<APN1 Value=" " Pass="passw0rd"/>
+				<APN2 Value=" " Pass="passw0rd"/>
+				<APN3 Value=" " Pass="passw0rd"/>
+				<APN4 Value=" " Pass="passw0rd"/>
+				<APN5 Value=" " Pass="passw0rd"/>
+			</APNs>
+			<Servers>
+				<S1 IP="10.191.5.195"/>
+				<S2 IP="0.0.0.0"/>
+				<S3 IP="0.0.0.0"/>
+				<S4 IP="0.0.0.0"/>
+				<S5 IP="0.0.0.0"/>
+			</Servers>
+			<SMS_Reply>
+				<A1 ADDR="45000045"/>
+				<A2 ADDR=""/>
+				<A3 ADDR=""/>
+				<A4 ADDR=""/>
+				<A5 ADDR=""/>
+			</SMS_Reply>
+			<SMS_Mode ResetMin="10080" HelloPktInterval="2940" State="7"></SMS_Mode>
+			<Port>1720</Port>
+			<SrvcCntrAddr ADDR="+17057969300"></SrvcCntrAddr>
+		</Rogers>
+	</SIMs>
+	<Models>
+		<PTE-II.N>
+			<ProdNo>EK01017</ProdNo>
+			<Firmware>Elite3.4</Firmware>
+			<SIMs>Numerex</SIMs>
+			<Tests>40,45,3,60,41,46,50,55,6,7,8,9,10,11,12,14,15,16,17,18,61,42,47,51,56,19,20,21,22,23,24,25,26,27,28,29,30,31,32,62,65</Tests>
+			<Current Min="0.004" Max="0.2" Inrush_Max="0.5" Inrush_Duration="3"></Current>
+			<GPS AlwaysOn="1"></GPS>
+			<Security Valet="1"></Security>
+			<SerialNo Start="10100000" End="10199999" Next="10100057"></SerialNo>
+			<IMEI>
+				<ModemModel>BGS2</ModemModel>
+				<TAC>01307900</TAC>
+				<SV>01</SV>
+				<SNR Start="000000" End="999999" Next="000100"></SNR>
+			</IMEI>
+		</PTE-II.N>
+		<PTE-II.R>
+			<ProdNo>EK01016</ProdNo>
+			<Firmware>Elite3.7</Firmware>
+			<SIMs>T-Mobile</SIMs>
+			<Tests>40,45,3,60,41,46,50,55,6,7,8,9,10,11,12,15,16,17,18,61,42,47,51,56,19,20,21,22,23,24,25,26,27,28,29,30,31,32,62,65</Tests>
+			<Current Min="0.004" Max="0.2" Inrush_Max="0.5" Inrush_Duration="3"></Current>
+			<GPS AlwaysOn="1"></GPS>
+			<Security Valet="1"></Security>
+			<SerialNo Start="10000000" End="10099999" Next="10000053"></SerialNo>
+			<IMEI>
+				<ModemModel>BGS2</ModemModel>
+				<TAC>01307900</TAC>
+				<SV>01</SV>
+				<SNR Start="000000" End="999999" Next="000100"></SNR>
+			</IMEI>
+		</PTE-II.R>
+		<PTC-II.R>
+			<ProdNo>HK019022</ProdNo>
+			<Firmware>Elite3.3</Firmware>
+			<SIMs>Rogers</SIMs>
+			<Tests>40,45,3,60,41,46,50,55,6,7,8,9,10,11,12,14,15,16,17,18,61,42,47,51,56,19,20,21,22,23,24,25,26,27,28,29,30,31,32,62,65</Tests>
+			<Current Min="0.004" Max="0.2" Inrush_Max="0.5" Inrush_Duration="3"></Current>
+			<GPS AlwaysOn="0"></GPS>
+			<Security Valet="1"></Security>
+			<SerialNo Start="19200000" End="19299999" Next="19200052"></SerialNo>
+			<IMEI>
+				<ModemModel>BGS2</ModemModel>
+				<TAC>01307900</TAC>
+				<SV>01</SV>
+				<SNR Start="000000" End="999999" Next="000100"></SNR>
+			</IMEI>
+		</PTC-II.R>
+		<TRAX-II.N>
+			<ProdNo>HK019024</ProdNo>
+			<Firmware>Elite3.3</Firmware>
+			<SIMs>Numerex</SIMs>
+			<Tests>40,45,3,60,41,46,50,54,55,6,7,8,9,11,14,15,17,61,42,47,51,56,16,18,19,20,21,22,23,26,30,31,32,62,65</Tests>
+			<Current Min="0.004" Max="0.2" Inrush_Max="0.5" Inrush_Duration="3"></Current>
+			<GPS AlwaysOn="1"></GPS>
+			<Security Valet="1"></Security>
+			<SerialNo Start="8150000" End="8199999" Next="8156038"></SerialNo>
+			<IMEI>
+				<ModemModel>BGS2</ModemModel>
+				<TAC>01307900</TAC>
+				<SV>01</SV>
+				<SNR Start="000000" End="999999" Next="000100"></SNR>
+			</IMEI>
+		</TRAX-II.N>
+		<TRAX-II.R>
+			<ProdNo>HK019023</ProdNo>
+			<Firmware>Elite3.3</Firmware>
+			<SIMs>T-Mobile</SIMs>
+			<Tests>40,45,3,60,41,46,50,54,55,6,7,8,9,11,15,17,61,42,47,51,56,16,18,19,20,21,22,23,26,30,31,32,62,65</Tests>
+			<Current Min="0.004" Max="0.2" Inrush_Max="0.5" Inrush_Duration="3"></Current>
+			<GPS AlwaysOn="1"></GPS>
+			<Security Valet="1"></Security>
+			<SerialNo Start="8100000" End="8142000" Next="8127013"></SerialNo>
+			<IMEI>
+				<ModemModel>BGS2</ModemModel>
+				<TAC>01307900</TAC>
+				<SV>01</SV>
+				<SNR Start="000000" End="999999" Next="000100"></SNR>
+			</IMEI>
+		</TRAX-II.R>
+		<TRAX-II>
+			<ProdNo>HK019023</ProdNo>
+			<Firmware>Elite3.4</Firmware>
+			<SIMs>T-Mobile</SIMs>
+			<Tests>40,45,3,60,41,46,50,54,55,6,7,8,9,11,15,17,61,42,47,51,56,16,18,19,20,21,22,23,26,30,31,32,62,65</Tests>
+			<Current Min="0.004" Max="0.2" Inrush_Max="0.5" Inrush_Duration="3"></Current>
+			<GPS AlwaysOn="1"></GPS>
+			<Security Valet="1"></Security>
+			<SerialNo Start="8142000" End="8149999" Next="8142000"></SerialNo>
+			<IMEI>
+				<ModemModel>BGS2</ModemModel>
+				<TAC>01307900</TAC>
+				<SV>01</SV>
+				<SNR Start="000000" End="999999" Next="000100"></SNR>
+			</IMEI>
+		</TRAX-II>
+		<TRAX-II.CR>
+			<ProdNo>HK019023</ProdNo>
+			<Firmware>Elite3.4</Firmware>
+			<SIMs>Rogers</SIMs>
+			<Tests>40,45,3,60,41,46,50,55,6,7,8,9,10,11,12,14,15,16,17,18,61,42,47,51,56,19,20,21,22,23,24,25,26,27,28,29,30,31,32,62,65</Tests>
+			<Current Min="0.004" Max="0.2" Inrush_Max="0.5" Inrush_Duration="3"></Current>
+			<GPS AlwaysOn="0"></GPS>
+			<Security Valet="1"></Security>
+			<SerialNo Start="8200000" End="8299999" Next="8200000"></SerialNo>
+			<IMEI>
+				<ModemModel>BGS2</ModemModel>
+				<TAC>01307900</TAC>
+				<SV>01</SV>
+				<SNR Start="000000" End="999999" Next="000100"></SNR>
+			</IMEI>
+		</TRAX-II.CR>
+		<PTE-II.NS>
+			<ProdNo>EK01017</ProdNo>
+			<Firmware>Elite3.8</Firmware>
+			<SIMs>Numerex</SIMs>
+			<Tests>40,45,3,60,41,46,50,55,6,7,8,9,10,11,12,14,15,16,17,18,61,42,47,51,66,43,48,52,56,19,20,21,22,23,24,25,26,27,28,29,30,31,32,62,65</Tests>
+			<Current Min="0.004" Max="0.2" Inrush_Max="1.3" Inrush_Duration="15"></Current>
+			<GPS AlwaysOn="1"></GPS>
+			<Security Valet="1"></Security>
+			<SerialNo Start="10200000" End="10299999" Next="10200000"></SerialNo>
+			<IMEI>
+				<ModemModel>BGS2</ModemModel>
+				<TAC>01307900</TAC>
+				<SV>01</SV>
+				<SNR Start="000000" End="999999" Next="000100"></SNR>
+			</IMEI>
+		</PTE-II.NS>
+		<PTE-II.S>
+			<ProdNo>EK01017</ProdNo>
+			<Firmware>Elite3.8</Firmware>
+			<SIMs>T-Mobile</SIMs>
+			<Tests>40,45,3,60,41,46,50,55,6,7,8,9,10,11,12,15,16,17,18,61,42,47,51,66,43,48,52,56,19,20,21,22,23,24,25,26,27,28,29,30,31,32,62,65</Tests>
+			<Current Min="0.004" Max="0.2" Inrush_Max="1.3" Inrush_Duration="15"></Current>
+			<GPS AlwaysOn="1"></GPS>
+			<Security Valet="1"></Security>
+			<SerialNo Start="10300000" End="10399999" Next="10300000"></SerialNo>
+			<IMEI>
+				<ModemModel>BGS2</ModemModel>
+				<TAC>01307900</TAC>
+				<SV>01</SV>
+				<SNR Start="000000" End="999999" Next="000100"></SNR>
+			</IMEI>
+		</PTE-II.S>
+		<PTC-II.RS>
+			<ProdNo>HK019022</ProdNo>
+			<Firmware>Elite3.7</Firmware>
+			<SIMs>Rogers</SIMs>
+			<Tests>40,45,3,60,41,46,50,66,43,48,52,55,6,7,8,9,10,11,12,14,15,16,17,18,61,42,47,51,56,19,20,21,22,23,24,25,26,27,28,29,30,31,32,62,65</Tests>
+			<Current Min="0.004" Max="0.2" Inrush_Max="1.3" Inrush_Duration="15"></Current>
+			<GPS AlwaysOn="0"></GPS>
+			<Security Valet="1"></Security>
+			<SerialNo Start="19300000" End="19399999" Next="19300000"></SerialNo>
+			<IMEI>
+				<ModemModel>BGS2</ModemModel>
+				<TAC>01307900</TAC>
+				<SV>01</SV>
+				<SNR Start="000000" End="999999" Next="000100"></SNR>
+			</IMEI>
+		</PTC-II.RS>
+	</Models>
+</Elite>

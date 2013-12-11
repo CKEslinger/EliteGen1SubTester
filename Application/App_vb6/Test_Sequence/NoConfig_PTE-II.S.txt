@@ -1,0 +1,22 @@
+Test  65: Test 'Fail Safe' mode
+Test  41: Power ON
+Test  46: Test DUT current draw
+Test  50: Setup and Test Serial Comms to Device
+Test  55: Test if modem initialized correctly
+Test  44: Wait for Initialization
+Test  50: Setup and Test Serial Comms to Device
+Test  19: Test Application firmware version
+Test  20: Test the Serial #
+Test  21: Test the IMEI from the modem
+Test  22: Test the IMSI from the SIM card
+Test  23: Test the ICCID from the SIM card
+Test  24: Test the buzzer
+Test  25: Test RF receiver
+Test  26: Test LEDs
+Test  27: Test ignition relay 
+Test  28: Test starter relay
+Test  29: Test relays
+Test  30: Test the voltage regulator
+Test  31: Test GPS Signal Strength
+Test  32: Test GSM Signal Strength
+Test  66: Test Super Cap Voltage

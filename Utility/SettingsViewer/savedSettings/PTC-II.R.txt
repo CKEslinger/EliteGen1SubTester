@@ -1,0 +1,49 @@
+Model Type: PTC-II.R
+XML File Version: 2.90
+XML File Compatibility
+ Min. Version of Tester Application: 2.4.17
+ Max. Version of Tester Application: 2.4.999
+GPS P/F Criteria (-dBm):
+ Min.: 30
+ Max.: 60
+GPRS P/F Criteria (RSSI):
+ Min.: 14
+ Max.: 31
+FW Rev.: Elite3.3
+Product #: HK019022
+Current: 0.004A < I < 0.2A
+GPS Always On: no
+Security Valet: yes
+Serial # Range: 19200000 - 19299999
+Next Serial #: 19200052
+Modem Model #: BGS2
+IMEI TAC: 01307900
+Next IMEI SN: 000100
+SIM: Rogers
+   Service Center Address:
+      ADDR=+17057969300
+   Port: 1720
+   SMS Mode:
+      ResetMin=10080
+      HelloPktInterval=2940
+      State=7
+   APNs:
+      APN0: passtime.apn
+      APN1: 
+      APN2: 
+      APN3: 
+      APN4: 
+      APN5: 
+   Servers:
+      S1: 10.191.5.195
+      S2: 0.0.0.0
+      S3: 0.0.0.0
+      S4: 0.0.0.0
+      S5: 0.0.0.0
+   SMS_Reply:
+      A1: 45000045
+      A2: 
+      A3: 
+      A4: 
+      A5: 
+Computer Name: PT-BLFT-3

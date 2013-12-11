@@ -1,0 +1,46 @@
+Save Config:
+MM(Print Mode):T
+MN(Media Tracking):W
+MT(Media Type):T
+LH(Label Home):0,0
+JM(Dots per Millimeter):A
+PR(Print Rate):2,2
+MD(Media Darkness):10
+JU(Configuration Update):S
+
+Temp Config:
+CI(Change International Font):13
+LH(Label Home):35,20
+LL(Label Length):0600
+PW(Print Width):1049
+PQ(Print Quantity):1,0,1,Y
+
+Barcode0:
+BY(Barcode Field Default):3,2,198
+FT(Field Typeset):97,548
+B3(Code 39 Barcode):N,N,,N,N
+FD(Field Data):
+
+Barcode1:
+BY(Barcode Field Default):3,2,198
+FT(Field Typeset):331,198
+B3(Code 39 Barcode):N,N,,N,N
+FD(Field Data):
+
+Text0:
+FT(Field Typeset):274,319
+A(Font):0N,50,50
+FH(Field Hexadecimal Indicator):\
+FD(Field Data):IMSI: 
+
+Text1:
+FT(Field Typeset):275,251
+A(Font):0N,50,52
+FH(Field Hexadecimal Indicator):\
+FD(Field Data):PassTimeSN: 
+
+Text2:
+FT(Field Typeset):310,582
+A(Font):0N,33,33
+FH(Field Hexadecimal Indicator):\
+FD(Field Data):ICCID: 

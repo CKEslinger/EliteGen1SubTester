@@ -1,0 +1,16 @@
+C:>ICD3CMD.exe -P24FJ256GA106 -FC:\PassTimeData\Elite3.8.hex -M 
+
+Connecting... 
+MPLAB ICD 3 detected 
+Connecting to MPLAB ICD 3... 
+Firmware Suite Version...... 01.26.81 
+Firmware type......................dsPIC33F/24F/24H 
+MPLAB ICD 3 Connected. 
+Target Detected 
+
+Invalid Device Detected !!! 
+ 
+ICD3CMD Returned Error Level 5 
+ 
+EXIT 1 
+ 

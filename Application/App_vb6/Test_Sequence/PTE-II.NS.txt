@@ -1,0 +1,36 @@
+Test  65: Test 'Fail Safe' mode
+Test  41: Power ON
+Test  46: Test DUT current draw
+Test  50: Setup and Test Serial Comms to Device
+Test  54: Setup and Test GSM Modem Serial Comms
+Test  55: Test if modem initialized correctly
+Test  7: Configure SMS Reply-to address
+Test  8: Configure SMS as the default comm. mode
+Test  9: Configure low power mode
+Test  10: Configure antitheft mode
+Test  11: Configure the APN and password
+Test  12: Configure the server IP addresses
+Test  14: Configure the service center address
+Test  15: Configure the port address
+Test  16: Configure the Serial #
+Test  17: Configure the IMEI on the modem
+Test  18: Save Changes to SPI Flash
+Test  63: Reset
+Test  44: Wait for Initialization
+Test  50: Setup and Test Serial Comms to Device
+Test  54: Setup and Test GSM Modem Serial Comms
+Test  19: Test Application firmware version
+Test  20: Test the Serial #
+Test  21: Test the IMEI from the modem
+Test  22: Test the IMSI from the SIM card
+Test  23: Test the ICCID from the SIM card
+Test  24: Test the buzzer
+Test  25: Test RF receiver
+Test  26: Test LEDs
+Test  27: Test ignition relay 
+Test  28: Test starter relay
+Test  29: Test relays
+Test  30: Test the voltage regulator
+Test  31: Test GPS Signal Strength
+Test  32: Test GSM Signal Strength
+Test  66: Test Super Cap Voltage

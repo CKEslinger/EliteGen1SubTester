@@ -1,0 +1,115 @@
+PassTime Elite II Tester BUILDME.txt
+ Build Date: 7/9/2013
+ File Version: 2.4.0.20
+ Product version 2.04.0020
+ Splash Screen Version 2.4, Build 20
+
+Build Information
+
+This file contains information on how to build the PassTime Tester
+dialog based application for validating the correct programming and functioning
+of a PassTime Plus device.
+
+Compiler/Linker/Etc:
+--------------------
+Microsoft Visual Basic 6.0 (SP5) for 32-bit Windows Development 
+Version 8988, VBA 6.00.8804 Forms3: 11.0.6550
+
+References:
+"msado25.tlb" Microsoft ActiveX Data Objects 2.5 Library v.2.81.1117.0 
+		(xpsp_sp2_rtm.040803-2158)
+"msjro.dll" Microsoft Jet and Replication Objects 2.6 Library 2.81.1117.0 
+		(xpsp_sp2_rtm.040803-2158)
+"scrrun.dll" Microsoft Scripting Runtime v.5.6.0.8820
+"cbw32.dll" 32-bit Data Acquisition Library for Win32 v.1.53
+"msxml3.dll" Microsoft XML, v3.0
+
+Components:
+"mscomm32.ocx" Microsoft Comm Control 6.0 v.6.00.8169
+"comdlg32.ocx" Microsoft Common Dialog Control 6.0 (SP3) v.6.00.8418
+
+Project Source Code Location, etc.
+----------------------------------
+The source code files (*.bas, *.cls, .frm) for the project are located in 
+the project root directory, ".\Tester" The project files (*.vbw, *.vbp) are 
+located in the same directory as the source files.
+
+The following files need to reside in the application directory:
+"DosExec.bat"
+"LabelConfig_ZPL.txt"
+"ModelTypes.xml"
+
+Additionally the following files and folders need to reside in the specified 
+locations:
+Folder: "C:\PassTimeData"
+File:   "C:\PassTimeData\elite02.XXX.hex", where "XXX" is the application 
+                                           version (current version is a40)
+
+Compiler Switches, etc:
+-----------------------
+The Startup Object should be set to frmMainTester. The major version, minor 
+version and revision numbers can be specified on the "Make" tab of the project 
+properties dialog
+
+Build Instructions for PassTime Tester Dialog Application:
+------------------------------------------
+
+1. Download and install the InstaCal drivers and software program (5.70) for 
+   the data acquisition hardware (http://www.measurementcomputing.com/). This
+   should install the cbw32.dll file (v.1.53)
+2. Start Microsoft Visual Basic 6.0
+3. Open the project file PassTimeTester.vbp
+4. Make sure the references and components mentioned above have been added to 
+   the project. NB: The cbw32.dll reference is not needed for building the 
+   project but it is needed to run the application and should be included in 
+   the deployment package (see below) 
+5. Save the project
+6. Make the PassTime Tester.exe file (File->Make PassTime Tester.exe)
+   NB: the VB "Make" dialog will allow you to change the executable file name
+
+Note: No errors or warnings should occur
+
+Build Instructions for PassTime Tester Dialog Application Package:
+-------------------------------------------------
+ 1. Follow steps 1 through 6 above
+ 2. If necessary, install the "Package and Deployment Wizard" Add-In for VB6
+ 3. Run the "Package and Deployment Wizard" and select "Package". Do not reuse 
+    a previous package setup. If the package wizard defaults to use an existing 
+    package, use the dropdown menu to select "none"
+ 4. Select a package type "Standard Setup Package"
+ 5. Create a "New Folder" in the application folder to contain the setup 
+    package (e.g., "C:\Tester\PassTimeEliteTester_2.0.0")
+ 6. Ignore the warning that the "cbw.dll" file could not be found. It is not 
+    used in the win32 application
+ 7. Ignore errors regarding out of date or missing dependency files
+ 8. Deselect the following files
+    "comdlg32.ocx"
+    "MSBIND.DLL"
+    "MSCOMM32.OCX"
+    "MSTDFMT.DLL"
+    "scrrun.dll"
+ 9. Add the following additional files
+    "DosExec.bat"
+    "LabelConfig_ZPL.txt"
+    "ModelTypes.xml"
+    "elite02.XXX.hex"
+    "README.txt"
+    "ICD3CMD.exe"
+    "progPic.bat"
+
+    You may also want to add the file prnsend.txt. This is a temporary
+    file created by the application. Including it in the package is not 
+    necessary but will allow for a "clean" uninstall.
+10. Set the "Cab Options" to "Single cab" 
+11. Specify the Installation title as "PassTime Elite II Tester X.X.X Setup, 
+    where X.X.X is the major version, minor version and revision numbers 
+    respectively (e.g., PassTime Elite Tester 2.0.0 Setup)
+12. Specify the "Group" as "PassTime" and the "Group Item" as PassTime Elite II 
+    Tester"
+13. Respecify the locations for the application download file as follows:
+         File             Folder
+    "elite02.XXX.hex"    $(ProgramFiles)\..\PassTimeData
+14. Check the box next to the "ccrpTmr6.dll" file to install it as a "Shared 
+    File"
+15. You can optionally name the package script (e.g., PassTime Elite II Tester 
+    Setup) or just build the package by clicking on "Finish"

@@ -1,0 +1,49 @@
+Model Type: TRAX-II
+XML File Version: 2.90
+XML File Compatibility
+ Min. Version of Tester Application: 2.4.17
+ Max. Version of Tester Application: 2.4.999
+GPS P/F Criteria (-dBm):
+ Min.: 30
+ Max.: 60
+GPRS P/F Criteria (RSSI):
+ Min.: 14
+ Max.: 31
+FW Rev.: Elite3.4
+Product #: HK019023
+Current: 0.004A < I < 0.2A
+GPS Always On: yes
+Security Valet: yes
+Serial # Range: 8142000 - 8149999
+Next Serial #: 8142000
+Modem Model #: BGS2
+IMEI TAC: 01307900
+Next IMEI SN: 000100
+SIM: T-Mobile
+   Service Center Address:
+      ADDR=+12063130004
+   Port: 1720
+   SMS Mode:
+      ResetMin=10080
+      HelloPktInterval=10140
+      State=7
+   APNs:
+      APN0: elite.t-mobile.com
+      APN1: 
+      APN2: 
+      APN3: 
+      APN4: 
+      APN5: 
+   Servers:
+      S1: 10.10.39.30
+      S2: 10.10.39.33
+      S3: 0.0.0.0
+      S4: 0.0.0.0
+      S5: 0.0.0.0
+   SMS_Reply:
+      A1: 2239
+      A2: 2276
+      A3: 
+      A4: 
+      A5: 
+Computer Name: PT-BLFT-3
