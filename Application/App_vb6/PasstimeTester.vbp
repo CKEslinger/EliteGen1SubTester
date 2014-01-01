@@ -40,6 +40,7 @@ RelatedDoc=README.txt
 Module=Config; Config.bas
 Startup="Sub Main"
 HelpFile=""
+NoControlUpgrade=1
 Title="PasstimeTester"
 ExeName32="PassTimeTester.exe"
 Command32="-manual"
