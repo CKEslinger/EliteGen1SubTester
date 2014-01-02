@@ -70,6 +70,12 @@ Build Instructions for PassTime Tester Dialog Application:
 
 Note: No errors or warnings should occur
 
+
+Debugging Instructions for Passtime Tester Dialog Application
+-------------------------------------------------------------
+1. To ensure the working directory is correct, double click the .vbp file instead of opening Visual Basic first.
+
+
 Build Instructions for PassTime Tester Dialog Application Package:
 -------------------------------------------------
  1. Follow steps 1 through 6 above
