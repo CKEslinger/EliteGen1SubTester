@@ -12,8 +12,8 @@ of a PassTime Plus device.
 
 Compiler/Linker/Etc:
 --------------------
-Microsoft Visual Basic 6.0 (SP5) for 32-bit Windows Development
-Version 8988, VBA: Retail 6.0.8964  Forms3: 15.0.4420.101
+Microsoft Visual Basic 6.0 (SP6) for 32-bit Windows Development
+Version 9782, VBA: Retail 6.0.9782  Forms3: 15.0.4420.101
 
 References:
 "msado25.tlb" Microsoft ActiveX Data Objects 2.5 Library v.2.81.1117.0 
